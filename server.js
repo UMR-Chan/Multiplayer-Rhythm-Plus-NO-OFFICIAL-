@@ -1,18 +1,18 @@
 const http = require('http');
 const WebSocket = require('ws');
 
-// Crear servidor HTTP básico requerido por Railway
+// Servidor HTTP básico para satisfacer las reglas de Railway
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Rhythm+ Multiplayer Server is running smoothly!\n');
 });
 
-// Acoplar el servidor WebSocket al servidor HTTP utilizando el puerto dinámico de Railway
+// Acoplar WebSockets al servidor HTTP
 const wss = new WebSocket.Server({ server });
 const rooms = new Map(); // Almacena las salas activas
 
 console.log("=========================================");
-console.log(" Rhythm+ Multiplayer Server Active (v30.0 - Railway Ready)");
+console.log(" Rhythm+ Multiplayer Server Active (v30.0 - Railway Fixed)");
 console.log("=========================================");
 
 wss.on('connection', (ws) => {
@@ -155,8 +155,8 @@ wss.on('connection', (ws) => {
     });
 });
 
-// Usar el puerto asignado por Railway obligatoriamente
+// Puerto dinámico asignado obligatoriamente por Railway
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`Servidor de salas corriendo en el puerto ${PORT}`);
 });
