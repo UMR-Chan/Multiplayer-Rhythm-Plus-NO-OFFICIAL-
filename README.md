@@ -11,7 +11,7 @@ Servidor backend centralizado en **Node.js** y **Socket.io**, acompañado de un 
 
 ---
 
-## 🚀 Características
+##  Características
 
 * **Salas Privadas por Código:** Los usuarios pueden crear salas y compartir un código único para que otros se unan de forma global.
 * **Servidor Dedicado en Railway:** Arquitectura centralizada corriendo 24/7 en la nube de forma totalmente gratuita.
@@ -22,6 +22,6 @@ Servidor backend centralizado en **Node.js** y **Socket.io**, acompañado de un 
 ## 📂 Estructura del Repositorio
 
 ```text
-📦 rhythm-plus-duels-server
- ┣ 📜 package.json    # Configuración de dependencias (Express y Socket.io)
- ┗ 📜 server.js       # Lógica del backend para manejo de salas y conexiones
+ rhythm-plus-duels-server
+ ┣  package.json    # Configuración de dependencias (Express y Socket.io)
+ ┗  server.js       # Lógica del backend para manejo de salas y conexiones
